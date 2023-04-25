@@ -12,7 +12,7 @@ app.run(debug=True, host="localhost", port=8000) ## Changing port to 8000
 create server.py file
 Starter contents:
 
-from flask import Flask 
+from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route('/')
