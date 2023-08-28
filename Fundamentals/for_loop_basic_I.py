@@ -6,7 +6,8 @@ for ruben in range(0, 151, 1):
 for rdo in range(0, 1005, 5):
     print(rdo)
 
-#Counting, the Dojo Way - Print integers 1 to 100. If divisible by 5, print "Coding" instead. If divisible by 10, print "Coding Dojo".
+#Counting, the Dojo Way - Print integers 1 to 100.
+# If divisible by 5, print "Coding" instead. If divisible by 10, print "Coding Dojo".
 for tdw in range(101):
     if tdw % 5 == 0:
         print("Coding")
@@ -27,7 +28,9 @@ while number > 0:
     print(number)
     number -= 4
 
-#Flexible Counter - Set three variables: lowNum, highNum, mult. Starting at lowNum and going through highNum, print only the integers that are a multiple of mult. For example, if lowNum=2, highNum=9, and mult=3, the loop should print 3, 6, 9 (on successive lines)
+#Flexible Counter - Set three variables: lowNum, highNum, mult.
+# Starting at lowNum and going through highNum, print only the integers that are a multiple of mult.
+# For example, if lowNum=2, highNum=9, and mult=3, the loop should print 3, 6, 9 (on successive lines)
 lowNum = 2
 highNum = 9
 mult = 3
