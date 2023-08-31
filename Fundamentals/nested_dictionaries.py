@@ -59,14 +59,25 @@ iterateDictionary2('first_name', students)
 iterateDictionary2('last_name', students)
 
 #4 - Iterate Through a Dictionary with List Values
+# This creates a dictionary named 'dojo' with two keys: 'locations' and 'instructors', 
+# and each key has a list of values associated with it.
 dojo = {
     'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
     'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
+
+# This defines a function named 'printInfo' that takes a single argument named 'dictionary'.
 def printInfo(dictionary):
+    # This line starts a for loop that iterates over key-value pairs in the given 'dictionary'.
     for (key, value) in dictionary.items():
+        # This calculates the number of items in the 'value' (which is a list) and assigns it to 'count'.
         count = len(value)
+        # This prints the number of items and the key (converted to uppercase) from the dictionary.
         print(f'{count} {(key).upper()}')
+        # This nested for loop iterates over each individual item in the 'value' list.
         for ruben in value:
+            # This prints the current item from the 'value' list.
             print(ruben)
+
+# This calls the 'printInfo' function and provides the 'dojo' dictionary as an argument.
 printInfo(dojo)
