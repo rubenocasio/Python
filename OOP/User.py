@@ -24,6 +24,7 @@ class User:
     def display_info(self):
         # Print the full name, email, age, rewards membership status, and gold points of the user
         print(f"Full Name: {self.first_name} {self.last_name}\nEmail: {self.email}\nAge: {self.age}\nRewards: {self.is_rewards_member}\nGold Points: {self.gold_card_points}")
+        print("Full Name: ", self.first_name)
         # Return the current instance to allow method chaining
         return self
 
