@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Dojo Survey Form</h2>
+    <form action="/process" method="post">
+        <div class="form-group">
+            <label for="name_input">Your Name:</label>
+            <input type="name" name="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="location_choice">Dojo Location:</label>
+            <select class="form-control" name="location" type="submit">
+                <option>San Jose</option>
+                <option>Virginia Beach</option>
+                <option>Arlington</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="language_choice">Favorite Language:</label>
+            <select class="form-control" name="language" type="submit">
+                <option>Python</option>
+                <option>JavaScript</option>
+                <option>C#</option>
+                <option>Java</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="comment_area">Comment (optional):</label>
+            <textarea type="text" class="form-control" name="comment"></textarea>
+        </div>
+        
+        <!-- Ninja Bonus: Radio buttons -->
+        Prefered Language:
+        <input type="radio" name="radio_option" value="Python" required> Python
+        <input type="radio" name="radio_option" value="JavaScript"> JavaScript
+        <input type="radio" name="radio_option" value="Java"> Java
+        <br>
+        
+        <!-- Sensei Bonus: Checkboxes -->
+        Interests:
+        <input type="checkbox" name="checkbox_options" value="Coding"> Coding
+        <input type="checkbox" name="checkbox_options" value="Hiking"> Hiking
+        <input type="checkbox" name="checkbox_options" value="Reading"> Reading
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
