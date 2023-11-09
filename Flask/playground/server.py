@@ -13,10 +13,9 @@ def indexPlay():
 def indexPlayNum(num):
     return render_template('index.html', x = int(num), background = 'lightblue')
 
-@app.route('/play/<num>/<color>')
+@app.route('/play/<num>/<string:color>')
 def indexPlayNumColor(num, color):
     return render_template('index.html', x = int(num), background = color)
-
 
 if __name__=="__main__":
     app.run(debug=True)

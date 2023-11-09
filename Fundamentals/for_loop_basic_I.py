@@ -11,22 +11,21 @@ for rdo in range(0, 1005, 5):
 for tdw in range(101):
     if tdw % 5 == 0:
         print("Coding")
-    if tdw % 10 == 0:
+    elif tdw % 10 == 0:
         print("Coding Dojo")
-    print(tdw)
+    else:
+        print(tdw)
 
 #Whoa. That Sucker's Huge - Add odd integers from 0 to 500,000, and print the final sum.
 sum = 0
-max = 500_000
-for number in range(1, max + 1, 2):
-    sum += number
-print("The sum of odd integers from 0 to", max, "is:", sum)
+for num in range(1, 500000, 2):
+    sum += num
+print("The sum of odd integers from 0 to is: ", sum)
 
 #Countdown by Fours - Print positive numbers starting at 2018, counting down by fours.
-number = 2018
-while number > 0:
-    print(number)
-    number -= 4
+num = 2018
+for n in range(num, 0, -4):
+    print(n)
 
 #Flexible Counter - Set three variables: lowNum, highNum, mult.
 # Starting at lowNum and going through highNum, print only the integers that are a multiple of mult.
@@ -34,7 +33,6 @@ while number > 0:
 lowNum = 2
 highNum = 9
 mult = 3
-
-for number in range(lowNum, highNum + 1):
-    if number % mult == 0:
-        print(number)
+for i in range(lowNum, highNum, mult):
+    if i % mult == 0:
+        print(i)

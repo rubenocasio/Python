@@ -1,5 +1,5 @@
-from classes.Ninja import Ninja
 from classes.Pet import Pet
+from classes.Ninja import Ninja
 # from classes.Dog import Dog
 
 dog = Pet("Petey", "Dog", ["Sit", "fetch", "Roll"])

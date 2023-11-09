@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Recipe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="mb-4">Edit Recipe</h2>
+                {% for message in get_flashed_messages(category_filter=['create']) %}
+                <p>{{message}}</p>
+                {% endfor %}
+                <form action="/edit_recipe/update/{{recipe.id}}" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="name" value="{{recipe.name}}"
+                            placeholder="Name of Recipe">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="description" value="{{recipe.description}}"
+                            placeholder="Recipe Description">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-check-label" for="minutes">Under 30 minutes:</label>
+                        <label class="form-check-label" for="minutes">Yes</label>
+                        <input class="form-check-input" type="radio" name="minutes" value="{{recipe.minutes}}">
+                        <label class="form-check-label" for="minutes">No</label>
+                        <input class="form-check-input" type="radio" name="minutes" value="{{recipe.minutes}}">
+                      </div>
+                      <div class="mb-3">
+                        <textarea class="form-control" name="instructions" value="{{recipe.instructions}}" rows="4" >{{recipe.instructions}}</textarea>
+                      </div>
+                    <div class="mb-3">
+                        <label class="form-check-label" for="minutes">Date:</label>
+                        <input type="date" class="form-control" name="date_made" value="{{recipe.date_made}}">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                    <a href="/dashboard" class="btn btn-outline-danger">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
