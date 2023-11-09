@@ -1,0 +1,22 @@
+.header {
+    text-align: center;
+}
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form > h1 {
+    text-align: center;
+
+}
+.form {
+    width: 400px;
+    padding-left: 10px;
+}
+
+.list {
+    width: 400px;
+    outline: black solid 1px;
+    padding-left: 10px;
+}

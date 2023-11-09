@@ -1,0 +1,55 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <title>Authors Favorites Page</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Authors Favorites Page</h1>
+            <a href="/" class="btn btn-outline-dark mb-3">Authors</a>
+            <a href="/books" class="btn btn-outline-success mb-3">Books</a>
+        </div>
+        <div class="container">
+            <div class="list">
+                <h1>{{ authors.name}} Favorites</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Title</th>
+                            <th scope="col">Num of Pages</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for b in authors.fav_books %}
+                        <tr>
+                            <td>{{ b.title }}</td>
+                            <td>{{ b.num_of_pages }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="list">
+                <h1>Add Author's Favorite</h1>
+                <form action="/favoriteAuthors/add/{{authors.id}}" method="post">
+                    <div class="mb-3">
+                        <label for="book" class="form-label">Book:</label>
+                        <select name="book" >
+                            {% for b in books %}
+                            <option value="{{ b.id }}">{{ b.title }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-outline-info">
+                </form>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    </body>
+    </html>
